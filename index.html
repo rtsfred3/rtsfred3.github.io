@@ -13,7 +13,7 @@
         <link rel="apple-touch-icon" sizes="72x72" href="GithubStatusJS/images/72x72.png">
         <link rel="apple-touch-icon" sizes="96x96" href="GithubStatusJS/images/96x96.png">
         <link rel="apple-touch-icon" sizes="144x144" href="GithubStatusJS/images/144x144.png">
-        <link rel="stylesheet" type="text/css" href="https://dl.dropboxusercontent.com/s/8yxw8u9tzwqpg04/github.css">
+        <link rel="stylesheet" type="text/css" href="GithubStatusJS/github.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
         <script type='text/javascript' src="https://wurfl.io/wurfl.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -22,25 +22,31 @@
         <script src="GithubStatusJS/app.js"></script>
         <script src="https://status.github.com/api/last-message.json?callback=Notify"></script>
         <title id="title"></title>
+        <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">-->
     </head>
-    
     <body>
         <div align='right'>
             <table>
                     <tr id="t02">
                         <td width="1%">
-                            <img src="https://raw.githubusercontent.com/cdeange/github-status/master/GithubStatus/src/main/res/drawable-xxhdpi/ic_launcher.png" alt="Github Icon" style="height:27px;">
+                            <img src="https://assets-cdn.github.com/pinned-octocat.svg" alt="Github Icon" style="height:27px;">
                         </td>
                         <td>
                             <div id="color"></div>
                         </td>
                         <td width="1%">
-                            <button onclick="refresh()"><font size="2"><div id="refresh"></div></font></button>
+                            <button onclick="refresh()">
+                                <font size="2">
+                                    <div id="refresh"></div>
+                                </font>
+                            </button>
                         </td>
                         <td width="1%">
                             <div>
                                 <button type="button" class="GithubHTML">
-                                    <img src="https://raw.githubusercontent.com/cdeange/github-status/master/GithubStatus/src/main/res/drawable-xxhdpi/ic_action_info.png" style="height:18px;">
+                                    <!--<i class="material-icons">info_outline</i>-->
+                                    <img src="images/ic_info.png" style="height:18px;">
                                 </button>
                             </div>
                         </td>
@@ -59,6 +65,6 @@
             <script src="https://status.github.com/api/messages.json?callback=Messages"></script>
         </font>
         
-        <script src="https://dl.dropboxusercontent.com/s/op2ic7onoukuw5h/github.js"></script>
+        <script src="GithubStatusJS/github.js"></script>
     </body>
 </html>
