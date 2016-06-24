@@ -1,29 +1,27 @@
-<html>
+<!DOCTYPE html>
+<html manifest="github.appcache">
     <head>
+        <meta name="author" content="rtsfred3">
+        <meta name="application-name" content="Github Status">
         <meta name="theme-color" content="green">
-        <meta name="application-name" content="Github Status - Lite">
-        <meta name="description" content="Github Status - Lite">
+        <meta name="description" content="This site provides the status of Github">
         <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-title" content="Github Status - Lite">
+        <meta name="apple-mobile-web-app-title" content="Github Status">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="green">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="HandheldFriendly" content="true" />
-        <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/pinned-octocat.svg">
-        <link rel="apple-touch-icon" sizes="72x72" href="GithubStatusJS/images/72x72.png">
-        <link rel="apple-touch-icon" sizes="96x96" href="GithubStatusJS/images/96x96.png">
+        <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
         <link rel="apple-touch-icon" sizes="144x144" href="GithubStatusJS/images/144x144.png">
         <link rel="stylesheet" type="text/css" href="GithubStatusJS/github.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
         <script type='text/javascript' src="https://wurfl.io/wurfl.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
         <script src="GithubStatusJS/app.js"></script>
         <script src="https://status.github.com/api/last-message.json?callback=Notify"></script>
-        <title id="title"></title>
-        <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            rel="stylesheet">-->
+        <title id="title">Github Status</title>
     </head>
     <body>
         <div align='right'>
@@ -31,21 +29,21 @@
                     <tr id="t02">
                         <td width="1%">
                             <img src="https://assets-cdn.github.com/pinned-octocat.svg" alt="Github Icon" style="height:27px;">
+                            <!--<img src="images/black.svg" style="height:27px;">-->
                         </td>
                         <td>
-                            <div id="color"></div>
+                            <div id="color"><font size="4">Github Status</font></div>
                         </td>
                         <td width="1%">
                             <button onclick="refresh()">
                                 <font size="2">
-                                    <div id="refresh"></div>
+                                    <div id="refresh">Refresh</div>
                                 </font>
                             </button>
                         </td>
                         <td width="1%">
                             <div>
                                 <button type="button" class="GithubHTML">
-                                    <!--<i class="material-icons">info_outline</i>-->
                                     <img src="GithubStatusJS/images/ic_info.png" style="height:18px;">
                                 </button>
                             </div>
@@ -54,17 +52,24 @@
             </table>
         </div>
         
-        <div id="status"></div>
+        <div id="status">
+            <center>
+                <b>
+                    <!--<font style="font-family: verdana !important;" size="7" id="black">UNAVAILABLE</font>-->
+                    <font size="7" id="black">UNAVAILABLE</font>
+                </b>
+            </center>
+        </div>
         <script src="https://status.github.com/api/last-message.json?callback=Status"></script>
         
         <font class="all">
             Previous Messages:
             <hr size='1' noshade>
             
-            <div id="messages"></div>
+            <div id="messages"><i>No new messages.</i></div>
             <script src="https://status.github.com/api/messages.json?callback=Messages"></script>
         </font>
         
-        <script src="GithubStatusJS/github.js"></script>
+        <script src="github.js"></script>
     </body>
 </html>
