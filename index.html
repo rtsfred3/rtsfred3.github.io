@@ -16,7 +16,7 @@
         <link rel="stylesheet" type="text/css" href="GithubStatusJS/github.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
         <script src="GithubStatusJS/app.js"></script>
-        <script src="https://status.github.com/api/last-message.json?callback=Notify"></script>
+        <!--<script src="https://status.github.com/api/last-message.json?callback=Notify"></script>-->
         <title id="title">Github Status</title>
     </head>
     <body>
@@ -24,9 +24,7 @@
             <table>
                     <tr id="t02">
                         <td width="1%">
-                            <div id='image'>
-                                <img src="https://assets-cdn.github.com/pinned-octocat.svg" alt="Github Icon" style="height:27px;">
-                            </div>
+                            <div id='image'></div>
                         </td>
                         <td>
                             <div id="color"><font size="4">Github Status</font></div>
@@ -38,23 +36,13 @@
                                 </font>
                             </button>
                         </td>
-                        <!--<td width="1%">
-                            <div>
-                                <button onclick="info()" class="GithubHTML">
-                                    <img id="info" src="GithubStatusJS/images/ic_info.png" style="height:16px;">
-                                </button>
-                            </div>
-                        </td>-->
                     </tr>
             </table>
         </div>
         
         <div id="status">
             <center>
-                <b>
-                    <!--<font style="font-family: verdana !important;" size="7" id="black">UNAVAILABLE</font>-->
-                    <font size="7" id="black">UNAVAILABLE</font>
-                </b>
+                <b><font size="7" id="black">UNAVAILABLE</font></b>
             </center>
         </div>
         <script src="https://status.github.com/api/last-message.json?callback=Status"></script>
